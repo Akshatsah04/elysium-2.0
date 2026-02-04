@@ -8,7 +8,7 @@ import RealmTime from '@/components/RealmTime';
 import RealmMortals from '@/components/RealmMortals';
 import MythologyMap from '@/components/MythologyMap';
 import AmbientAudio from '@/components/AmbientAudio';
-import PastEvent from '@/components/Pastevent'
+import PastEvent from '@/components/pastevent'
 import Footer from '@/components/Footer';
 
 const Index = () => {
