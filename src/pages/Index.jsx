@@ -27,7 +27,7 @@ const Index = () => {
             {/* <RealmTrials /> */}
 
             <RealmMortals />
-            <AmbientAudio />
+            {/* <AmbientAudio /> */}
             {/* <Footer /> */}
         </div>
     );
