@@ -57,7 +57,7 @@ const Time = () => {
                             { value: timeLeft.seconds, label: 'Seconds' },
                         ].map((item, i) => (
                             <div key={i} className="text-center">
-                                <div className="glass-card p-4 rounded-lg mb-2 animate-glow-pulse">
+                                <div className="glass-card p-4 rounded-lg mb-2 animate-glow-pulse flex justify-center items-center">
                                     <span className="font-display text-3xl md:text-5xl text-primary text-glow-gold">
                                         {String(item.value).padStart(2, '0')}
                                     </span>
