@@ -50,7 +50,7 @@ const RealmMortals = () => {
                         Enter the Realm
                     </button>
                 </motion.div>
-                <div className="font-display text-6xl sm:text-9xl md:text-[15rem] lg:text-[25rem] font-bold mt-4 text-glow-gold absolute top-[120%] md:top-[135%] left-1/2 -translate-x-1/2">Elysium</div>
+                <div className="font-display text-6xl sm:text-9xl md:text-[15rem] lg:text-[25rem] font-bold mt-4 text-glow-gold absolute top-[120%] md:top-[55vh] left-1/2 -translate-x-1/2">Elysium</div>
             </div>
         </section>
     );
