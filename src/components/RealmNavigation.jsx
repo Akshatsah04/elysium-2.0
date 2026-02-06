@@ -5,7 +5,7 @@ const realms = [
     { id: 'ely', name: 'Elysium', symbol: '𝕰' },
     { id: 'mythology-map', name: 'Nexus', symbol: '⚡' },
     { id: 'realm-time', name: 'Chronicles', symbol: '⏳' },
-    { id: 'gallery', name: 'Gallery', symbol: '⚔' },
+    { id: 'gallery', name: '', symbol: '⚔' },
     { id: 'realm-origins', name: 'Origins', symbol: 'Ω' },
     { id: 'team', name: 'Team', symbol: 'T' },
     { id: 'realm-mortals', name: 'Mortals', symbol: '✦' },
