@@ -68,7 +68,7 @@ const Skiper30 = () => {
   }, []);
 
   return (
-    <main className="w-full bg-[#E5E7EB] text-black">
+    <main className="w-full bg-black text-black lg:px-[4rem]">
       {/* INTRO */}
       {/* <div className="font-geist flex h-screen items-center justify-center">
         <span className="text-xs uppercase opacity-40">
@@ -84,17 +84,17 @@ const Skiper30 = () => {
         {isMobile ? (
           // Mobile: Only 2 Columns (images 0-2 and 3-5), starting from top (tp=0)
           <>
-            <Column images={[images[0], images[1], images[2]]} y={y1} tp={0} isMobile={true} />
-            <Column images={[images[3], images[4], images[5]]} y={y2} tp={0} isMobile={true} />
+            <Column images={[images[0], images[1], images[2], images[7], images[11]]} y={y1} tp={0} isMobile={true} />
+            <Column images={[images[3], images[4], images[5], images[6], images[11]]} y={y2} tp={0} isMobile={true} />
             {/* Columns 3 & 4 (images 6-11) are intentionally omitted on mobile */}
           </>
         ) : (
           // Desktop: All 4 Columns with offsets
           <>
             <Column images={[images[0], images[1], images[2]]} y={y1} tp={50} />
-            <Column images={[images[3], images[4], images[5]]} y={y2} tp={100} />
-            <Column images={[images[6], images[7], images[8]]} y={y3} tp={40} />
-            <Column images={[images[9], images[10], images[11]]} y={y4} tp={80} />
+            <Column images={[images[3], images[4], images[5], images[14]]} y={y2} tp={100} />
+            <Column images={[images[6], images[7], images[8], images[13]]} y={y3} tp={40} />
+            <Column images={[images[9], images[10], images[11], images[12]]} y={y4} tp={80} />
           </>
         )}
       </div>

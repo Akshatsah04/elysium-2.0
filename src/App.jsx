@@ -46,8 +46,6 @@ const App = () => {
                 <BrowserRouter>
                     <Routes>
                         <Route path="/" element={<Index />} />
-                        <Route path="/team" element={<Team />} />
-                        <Route path="/event" element={<Event />} />
                         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                         <Route path="*" element={<NotFound />} />
                     </Routes>

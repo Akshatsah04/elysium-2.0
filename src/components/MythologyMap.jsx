@@ -24,7 +24,7 @@ const realms = [
         description: 'A TEDx-style experience where innovators and creators share future-ready ideas that spark change and redefine possibilities.',
         color: '#3B82F6',
         connections: ['time', 'prophecy', 'mortals'],
-        icon: 'icon/techeden.jpeg'
+        icon: 'icon/techedn.jpeg'
     },
     {
         id: 'prophecy',
@@ -209,7 +209,7 @@ const MythologyMap = () => {
 
                             {/* Node */}
                             <motion.div
-                                className="relative w-16 h-20 md:w-20 md:h-[7rem] rounded-xl border-2 flex items-center justify-center"
+                                className="relative w-16 h-20 md:w-[6rem] md:h-[10rem] rounded-xl border-2 flex items-center justify-center"
                                 style={{
                                     borderColor: realm.color,
                                     backgroundColor: `${realm.color}20`,
