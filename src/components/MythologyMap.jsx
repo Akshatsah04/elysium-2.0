@@ -10,7 +10,7 @@ const realms = [
         x: 50,
         y: 15,
         description: 'A two-day fusion of technology, entrepreneurship, and culture at MUJ — where bold ideas, real innovation, and powerful performances come together.',
-        color: '#D4AF37',
+        color: '#3B82F6',
         connections: ['gods', 'prophecy'],
         icon: 'icon/elysium.jpeg'
     },
@@ -22,7 +22,7 @@ const realms = [
         x: 25,
         y: 35,
         description: 'A TEDx-style experience where innovators and creators share future-ready ideas that spark change and redefine possibilities.',
-        color: '#3B82F6',
+        color: '#8B5CF6',
         connections: ['time', 'prophecy', 'mortals'],
         icon: 'icon/techedn.jpeg'
     },
@@ -34,7 +34,7 @@ const realms = [
         x: 75,
         y: 35,
         description: 'A mesmerizing cultural showcase tracing the journey of women through Indian classical art — powerful, graceful, and deeply expressive.',
-        color: '#8B5CF6',
+        color: '#D946EF',
         connections: ['time', 'mortals', 'gods'],
         icon: 'icon/swara.jpeg'
     },
@@ -172,7 +172,7 @@ const MythologyMap = () => {
                                         key={`${realm.id}-${connId}`}
                                         d={getConnectionPath(realm, connId)}
                                         fill="none"
-                                        stroke={isActive ? '#D4AF37' : '#D4AF3730'}
+                                        stroke={isActive ? '#3B82F6' : '#3B82F630'}
                                         strokeWidth={isActive ? 0.3 : 0.15}
                                         strokeDasharray={isActive ? "none" : "1 1"}
                                         initial={{ pathLength: 0 }}

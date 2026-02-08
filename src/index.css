@@ -16,55 +16,59 @@
     --popover: 240 10% 6%;
     --popover-foreground: 45 20% 90%;
 
-    /* Ancient Gold - Primary */
-    --primary: 43 74% 49%;
+    /* Ancient Gold -> Mystic Blue - Primary */
+    --primary: 210 100% 60%;
     --primary-foreground: 240 10% 4%;
 
-    /* Electric Blue - Norse Energy */
-    --secondary: 210 100% 60%;
+    /* Electric Blue -> Neon Purple - Secondary */
+    --secondary: 270 100% 60%;
     --secondary-foreground: 240 10% 4%;
 
-    /* Ember Orange - Greek Fire */
-    --accent: 24 95% 53%;
+    /* Ember Orange -> Magenta/Pink - Accent */
+    --accent: 300 100% 60%;
     --accent-foreground: 240 10% 4%;
 
     --muted: 240 10% 15%;
-    --muted-foreground: 45 10% 60%;
+    --muted-foreground: 210 20% 60%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 45 20% 90%;
+    --destructive-foreground: 210 20% 90%;
 
-    --border: 43 30% 20%;
+    --border: 210 30% 20%;
     --input: 240 10% 15%;
-    --ring: 43 74% 49%;
+    --ring: 210 100% 60%;
 
     --radius: 0.5rem;
 
     /* Custom Mythological Colors */
     --obsidian: 240 10% 4%;
     --obsidian-light: 240 10% 8%;
-    --gold: 43 74% 49%;
-    --gold-light: 43 74% 65%;
-    --gold-dark: 43 74% 35%;
+
+    /* Remap Gold to Blue for compatibility */
+    --gold: 210 100% 60%;
+    --gold-light: 210 100% 75%;
+    --gold-dark: 210 100% 45%;
+
     --norse-blue: 210 100% 60%;
     --norse-blue-glow: 210 100% 70%;
-    --greek-ember: 24 95% 53%;
-    --greek-ember-glow: 24 95% 65%;
-    --divine-white: 45 20% 90%;
+    --greek-ember: 270 100% 60%;
+    /* Now Purple */
+    --greek-ember-glow: 270 100% 70%;
+    --divine-white: 210 20% 90%;
     --mist: 240 10% 50%;
 
     /* Gradients */
-    --gradient-gold: linear-gradient(135deg, hsl(43 74% 49%), hsl(43 74% 35%));
-    --gradient-divine: linear-gradient(180deg, hsl(43 74% 49% / 0.1), transparent);
+    --gradient-gold: linear-gradient(135deg, hsl(210 100% 60%), hsl(210 100% 40%));
+    --gradient-divine: linear-gradient(180deg, hsl(210 100% 60% / 0.1), transparent);
     --gradient-realm: linear-gradient(180deg, hsl(240 10% 4%), hsl(240 10% 8%), hsl(240 10% 4%));
     --gradient-norse: linear-gradient(135deg, hsl(210 100% 60% / 0.3), hsl(210 100% 40% / 0.1));
-    --gradient-greek: linear-gradient(135deg, hsl(24 95% 53% / 0.3), hsl(24 95% 40% / 0.1));
+    --gradient-greek: linear-gradient(135deg, hsl(270 100% 60% / 0.3), hsl(270 100% 40% / 0.1));
 
     /* Shadows */
-    --shadow-gold: 0 0 30px hsl(43 74% 49% / 0.3);
-    --shadow-gold-intense: 0 0 60px hsl(43 74% 49% / 0.5);
+    --shadow-gold: 0 0 30px hsl(210 100% 60% / 0.3);
+    --shadow-gold-intense: 0 0 60px hsl(210 100% 60% / 0.5);
     --shadow-norse: 0 0 30px hsl(210 100% 60% / 0.4);
-    --shadow-greek: 0 0 30px hsl(24 95% 53% / 0.4);
+    --shadow-greek: 0 0 30px hsl(270 100% 60% / 0.4);
 
     --sidebar-background: 240 10% 6%;
     --sidebar-foreground: 45 20% 90%;
@@ -93,24 +97,25 @@
 }
 
 @layer components {
+
   /* Divine Glow Button */
   .btn-divine {
     @apply relative px-8 py-4 font-display font-semibold text-lg uppercase tracking-widest;
     @apply bg-gradient-to-r from-primary to-primary/80 text-primary-foreground;
     @apply border border-primary/50 rounded-sm;
     @apply transition-all duration-500 ease-out;
-    box-shadow: var(--shadow-gold), inset 0 1px 0 hsl(43 74% 65% / 0.3);
+    box-shadow: var(--shadow-gold), inset 0 1px 0 hsl(210 100% 75% / 0.3);
   }
 
   .btn-divine::before {
     content: '';
     @apply absolute inset-0 rounded-sm opacity-0 transition-opacity duration-500;
-    background: linear-gradient(135deg, hsl(43 74% 65% / 0.4), transparent);
+    background: linear-gradient(135deg, hsl(210 100% 75% / 0.4), transparent);
   }
 
   .btn-divine:hover {
     @apply scale-105;
-    box-shadow: var(--shadow-gold-intense), inset 0 1px 0 hsl(43 74% 65% / 0.5);
+    box-shadow: var(--shadow-gold-intense), inset 0 1px 0 hsl(210 100% 75% / 0.5);
   }
 
   .btn-divine:hover::before {
@@ -119,7 +124,7 @@
 
   /* Glowing Text */
   .text-glow-gold {
-    text-shadow: 0 0 20px hsl(43 74% 49% / 0.5), 0 0 40px hsl(43 74% 49% / 0.3);
+    text-shadow: 0 0 20px hsl(210 100% 60% / 0.5), 0 0 40px hsl(210 100% 60% / 0.3);
   }
 
   .text-glow-norse {
@@ -127,12 +132,12 @@
   }
 
   .text-glow-greek {
-    text-shadow: 0 0 20px hsl(24 95% 53% / 0.5), 0 0 40px hsl(24 95% 53% / 0.3);
+    text-shadow: 0 0 20px hsl(270 100% 60% / 0.5), 0 0 40px hsl(270 100% 60% / 0.3);
   }
 
   /* Rune Glow */
   .rune-glow {
-    filter: drop-shadow(0 0 10px hsl(43 74% 49% / 0.6));
+    filter: drop-shadow(0 0 10px hsl(210 100% 60% / 0.6));
   }
 
   /* Glass Card */
@@ -175,7 +180,7 @@
   .divine-border::before {
     content: '';
     @apply absolute inset-0 rounded-lg;
-    background: linear-gradient(135deg, hsl(43 74% 49% / 0.3), transparent, hsl(43 74% 49% / 0.1));
+    background: linear-gradient(135deg, hsl(210 100% 60% / 0.3), transparent, hsl(210 100% 60% / 0.1));
     padding: 1px;
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
@@ -183,21 +188,28 @@
 }
 
 @layer utilities {
+
   /* Custom Animations */
   @keyframes float {
-    0%, 100% {
+
+    0%,
+    100% {
       transform: translateY(0px);
     }
+
     50% {
       transform: translateY(-20px);
     }
   }
 
   @keyframes pulseGlow {
-    0%, 100% {
+
+    0%,
+    100% {
       opacity: 0.5;
       filter: blur(20px);
     }
+
     50% {
       opacity: 1;
       filter: blur(30px);
@@ -208,6 +220,7 @@
     0% {
       background-position: -200% center;
     }
+
     100% {
       background-position: 200% center;
     }
@@ -217,22 +230,28 @@
     0% {
       transform: rotate(0deg);
     }
+
     100% {
       transform: rotate(360deg);
     }
   }
 
   @keyframes lightning {
-    0%, 90%, 100% {
+
+    0%,
+    90%,
+    100% {
       opacity: 0;
     }
-    92%, 98% {
+
+    92%,
+    98% {
       opacity: 1;
     }
   }
 
   .animate-shimmer {
-    background: linear-gradient(90deg, transparent, hsl(43 74% 49% / 0.3), transparent);
+    background: linear-gradient(90deg, transparent, hsl(210 100% 60% / 0.3), transparent);
     background-size: 200% 100%;
     animation: shimmer 3s infinite;
   }

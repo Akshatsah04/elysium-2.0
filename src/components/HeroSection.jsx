@@ -7,7 +7,7 @@ import Time from './Time'
 
 // --- Sub-Components ---
 
-const ParticleField = ({ count = 500, color = '#c9a227' }) => {
+const ParticleField = ({ count = 500, color = '#3B82F6' }) => {
     const mesh = useRef(null);
 
     const particles = useMemo(() => {
@@ -74,9 +74,9 @@ const WorldTree = () => {
             <mesh position={[0, 2, 0]}>
                 <cylinderGeometry args={[0.3, 0.5, 6, 8]} />
                 <meshStandardMaterial
-                    color="#2a1810"
+                    color="#0f172a"
                     roughness={0.9}
-                    emissive="#1a0f08"
+                    emissive="#020617"
                     emissiveIntensity={0.2}
                 />
             </mesh>
@@ -91,9 +91,9 @@ const WorldTree = () => {
                             <mesh position={[0.8, height, 0]} rotation={[0, 0, -Math.PI / 4]}>
                                 <cylinderGeometry args={[0.05, 0.15, 2, 6]} />
                                 <meshStandardMaterial
-                                    color="#3d2817"
+                                    color="#1e293b"
                                     roughness={0.8}
-                                    emissive="#1a0f08"
+                                    emissive="#020617"
                                     emissiveIntensity={0.1}
                                 />
                             </mesh>
@@ -107,8 +107,8 @@ const WorldTree = () => {
                 <mesh key={i} position={[0.35, 1 + i * 0.8, 0]} rotation={[0, 0, 0]}>
                     <boxGeometry args={[0.02, 0.3, 0.1]} />
                     <meshStandardMaterial
-                        color="#c9a227"
-                        emissive="#c9a227"
+                        color="#3B82F6"
+                        emissive="#3B82F6"
                         emissiveIntensity={1.5}
                         transparent
                         opacity={0.9}
@@ -127,7 +127,7 @@ const WorldTree = () => {
                     >
                         <cylinderGeometry args={[0.08, 0.15, 1.5, 6]} />
                         <meshStandardMaterial
-                            color="#2a1810"
+                            color="#0f172a"
                             roughness={0.9}
                         />
                     </mesh>
@@ -146,8 +146,8 @@ const WorldTree = () => {
                     >
                         <sphereGeometry args={[0.08, 16, 16]} />
                         <meshStandardMaterial
-                            color={i % 2 === 0 ? "#4fa3e3" : "#c9a227"}
-                            emissive={i % 2 === 0 ? "#4fa3e3" : "#c9a227"}
+                            color={i % 2 === 0 ? "#A855F7" : "#3B82F6"}
+                            emissive={i % 2 === 0 ? "#A855F7" : "#3B82F6"}
                             emissiveIntensity={2}
                             transparent
                             opacity={0.8}
@@ -168,19 +168,19 @@ const Scene3D = () => {
             >
                 <Suspense fallback={null}>
                     <ambientLight intensity={0.2} />
-                    <pointLight position={[10, 10, 10]} intensity={0.5} color="#c9a227" />
-                    <pointLight position={[-10, 5, -10]} intensity={0.3} color="#4fa3e3" />
+                    <pointLight position={[10, 10, 10]} intensity={0.5} color="#3B82F6" />
+                    <pointLight position={[-10, 5, -10]} intensity={0.3} color="#A855F7" />
                     <spotLight
                         position={[0, 15, 0]}
                         angle={0.3}
                         penumbra={1}
                         intensity={0.5}
-                        color="#c9a227"
+                        color="#3B82F6"
                     />
 
                     <WorldTree />
-                    <ParticleField count={300} color="#c9a227" />
-                    <ParticleField count={200} color="#4fa3e3" />
+                    <ParticleField count={300} color="#3B82F6" />
+                    <ParticleField count={200} color="#A855F7" />
 
                     <OrbitControls
                         enableZoom={false}
